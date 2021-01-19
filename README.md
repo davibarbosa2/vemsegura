@@ -1,3 +1,7 @@
+<div align="center"><img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=yellow&style=for-the-badge"></div>
+
+
+
 # Realização do Projeto
 
 - Este projeto faz parte de uma apresentação do Squad 2 -RJ feita durante o curso FullStack-RecodePRO da ONG [Recode.](https://www.recodepro.org.br/)
