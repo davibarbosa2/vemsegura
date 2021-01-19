@@ -22,4 +22,5 @@
 ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=Bootstrap)
+![PHP](https://img.shields.io/badge/-PHP-8892BF?style=flat-square&logo=php&logoColor=white)
 ![MySql](https://img.shields.io/badge/-mysql-%23F7DF1C?style=flat-square&logo=mysql&logoColor=00008b&labelColor=%00008b&color=%00008b)
