@@ -7,20 +7,20 @@
     <!--GoogleFont-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
     <!--BootStrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 
-    <title>vem segura</title>
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+
+    <title>Vem Segura</title>
 </head>
 
 <body>
     <header>
         <div class="container" id="nav-container">
             <nav class="navbar navbar-expand-lg  navbar-light">
-                <a href="/vemsegura/index.php" class="navbar-brand">
+                <a href="./index.php" class="navbar-brand">
                     <img id="logo" src="img/logo.png" alt="logo vem segura">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="toggle-navigation">

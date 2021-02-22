@@ -1,27 +1,19 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "vemsegura";
-
-    $conn = mysqli_connect($servername, $username, $password, $database);
-
-    if (!$conn) {
-    die("A conexão com o BD falhou: " . mysqli_connect_error());
-    }
+    require_once('include/conexao.php');
 
     if (isset($_POST['nome']) && isset($_POST['cpf']) && isset($_POST['endereco']) && isset($_POST['telefone']) && isset($_POST['email']) && isset($_POST['senha']) ) {
-    $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
-    $endereco = $_POST['endereco'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $endereco = $_POST['endereco'];
+        $telefone = $_POST['telefone'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
 
-    $sql = "insert into tb_cadastros (nome, cpf, endereco, telefone, email, senha) values ('$nome', '$cpf', '$endereco', '$telefone', '$email', '$senha')";
-    $result = $conn->query($sql);    
+        $sql = "insert into tb_cadastros (nome, cpf, endereco, telefone, email, senha) values ('$nome', '$cpf', '$endereco', '$telefone', '$email', '$senha')";
+        $result = $conn->query($sql);
     }
-    include('header.php')
+
+    include('include/headerForm.php');
 ?>
 
 
@@ -32,12 +24,12 @@
             <form action="./cadastro.php" method="POST">
                 <div class="contact-form row">
                     <div class="form-field col-lg-6">
-                        <input type="text" class="input-text" id="nome" name="nome">
+                        <input type="text" class="input-text" id="nome" name="nome" required>
                         <label for="name" class="label">Nome</label>
                     </div>
 
                     <div class="form-field col-lg-6">
-                        <input type="text" class="input-text" id="cpf" name="cpf">
+                        <input type="text" class="input-text" id="cpf" name="cpf" required>
                         <label for="cpf" class="label">CPF</label>
                     </div>
 
@@ -48,22 +40,22 @@
 
 
                     <div class="form-field col-lg-6">
-                        <input type="text" class="input-text" id="telefone" name="telefone">
+                        <input type="text" class="input-text" id="telefone" name="telefone" required>
                         <label for="descricao" class="label">Telefone</label>
                     </div>
 
                     <div class="form-field col-lg-12">
-                        <input type="text" class="input-text" id="email" name="email">
+                        <input type="text" class="input-text" id="email" name="email" required>
                         <label for="email" class="label">Email</label>
                     </div>
 
                     <div class="form-field col-lg-6">
-                        <input type="password" class="input-text" id="senha" name="senha">
+                        <input type="password" class="input-text" id="senha" name="senha" required>
                         <label for="senha" class="label">Senha</label>
                     </div>
                     <!-- Este botão abaixo é para confirmar senha ( PRECISA TERMINAR )-->
                     <div class="form-field col-lg-6">
-                        <input type="password" class="input-text" id="senha">
+                        <input type="password" class="input-text" id="senha" required>
                         <label for="senha" class="label">Confirmar Senha</label>
                     </div>
 
@@ -74,6 +66,5 @@
             </form>
         </div>
     </section>
-</body>
 
-</html>
+<?php include('include/footerForm.php')?>

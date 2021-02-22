@@ -1,9 +1,9 @@
 /*O SCRIPT FOI PASSADO PARA A PAGINA INDEX POIS O PHP CRIA ALGUM CONFLITO AO IMPORTAR ALGUM ARQUIVO JS EXTERNO*/
 
-/*$(document).ready(function () {
+$(document).ready(function() {
     //BarraDeProgresso
 
-  let containerA = document.getElementById("circleA");
+    let containerA = document.getElementById("circleA");
 
     let circleA = new ProgressBar.Circle(containerA, {
 
@@ -18,7 +18,7 @@
             color: '#ae55f2'
         },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
 
             circle.path.setAttribute('stroke', state.color);
 
@@ -45,7 +45,7 @@
             color: '#ae55f2'
         },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
 
             circle.path.setAttribute('stroke', state.color);
 
@@ -72,11 +72,11 @@
             color: '#ae55f2'
         },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
 
             circle.path.setAttribute('stroke', state.color);
 
-            let value = Math.round(circle.value() * 687);
+            let value = Math.round(circle.value() * 35);
 
             circle.setText(value);
         }
@@ -99,11 +99,11 @@
             color: '#ae55f2'
         },
 
-        step: function (state, circle) {
+        step: function(state, circle) {
 
             circle.path.setAttribute('stroke', state.color);
 
-            let value = Math.round(circle.value() * 269);
+            let value = Math.round(circle.value() * 46);
 
             circle.setText(value);
         }
@@ -115,7 +115,7 @@
     let dataAreaOffset = $('#data-area').offset();
     let stop = 0;
 
-    $(window).scroll(function (e) {
+    $(window).scroll(function(e) {
 
         let scroll = $(window).scrollTop();
 
@@ -134,7 +134,7 @@
 
     //Parallax(imagem ao fundo estatica)
 
-    setTimeout(function () {
+    setTimeout(function() {
 
         $('#data-area').parallax({
             imageSrc: 'img/parallax.jpg'
@@ -157,7 +157,7 @@
 
     let scrollTo = '';
 
-    $(navBtn).click(function () {
+    $(navBtn).click(function() {
 
         let btnId = $(this).attr('id')
 
@@ -186,5 +186,3 @@
 
 
 });
-
-*/

@@ -1,38 +1,15 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "vemsegura";
+    require_once ('include/conexao.php');
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
 
-if (!$conn) {
-    die("A conexão com o BD falhou: " . mysqli_connect_error());
-}
+        $sql = "insert into tb_novidades (email) values ('$email')";
+        $result = $conn->query($sql);
+    }
 
-if (isset($_POST['email'])) {
-    $email = $_POST['email'];
-
-    $sql = "insert into tb_novidades (email) values ('$email')";
-    $result = $conn->query($sql);
-}
+    include ('include/header.php');
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-    <title>vem segura</title>
-</head>
 
 <body>
     <div id="news-area">
@@ -47,6 +24,5 @@ if (isset($_POST['email'])) {
             </form>
         </div>
     </div>
-</body>
 
-</html>
+<?php include('include/footer.php')?>
